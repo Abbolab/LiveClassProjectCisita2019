@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="center">
 
     <Button
         android:id="@+id/btnHomeShowList"
         android:text="@string/button_home_show_users"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_marginBottom="20dp"/>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnSecondTest"
+        android:text="@string/button_home_secondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

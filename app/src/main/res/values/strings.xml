@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LiveSampleCisita2019</string>
     <string name="button_home_show_users">Mostra lista utenti</string>
+    <string name="button_home_secondo">Prova pulsante</string>
 </resources>

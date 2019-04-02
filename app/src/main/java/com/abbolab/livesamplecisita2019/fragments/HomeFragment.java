@@ -29,9 +29,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
-        Button btnShowList = (Button) view.findViewById(R.id.btnHomeShowList);
+        //http://www.abbolab.com/corsi/mobile/cisita2019/
 
+        // intercetto click primo pulsante "Show List"
+        Button btnShowList = (Button) view.findViewById(R.id.btnHomeShowList);
         btnShowList.setOnClickListener(this);
+
+        // setto onClick del secondo pulsante
+        view.findViewById(R.id.btnSecondTest).setOnClickListener(this);
 
     }
 
@@ -48,8 +53,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
-        Log.d(MainActivity.K_TAG, "Pulsante 'Show Users' premuto!");
+        //discrimino quale pulsante è stato premuto tramite ID
+        switch (view.getId()) {
+            case R.id.btnHomeShowList:
+                Log.d(MainActivity.K_TAG, "Pulsante 'Show Users' premuto!");
+                break;
+            case R.id.btnSecondTest:
+                Log.d(MainActivity.K_TAG, "Pulsante 'Second Test' premuto!");
+                break;
+        }
 
     }
 }
