@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.abbolab.livesamplecisita2019.fragments.HomeFragment;
+import com.abbolab.livesamplecisita2019.fragments.ListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,5 +51,29 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
 
         Log.d(K_TAG, "onDestroy MainActivity");
+    }
+
+    /**
+     * Sostituisco il fragment Home con quello List
+     */
+    public void goToListFragment() {
+
+        // creo una istanza del nuovo fragment
+        ListFragment listFragment = new ListFragment();
+
+        // ottengo fragment manager per iniziare la transizione di cambio fragment
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+
+        //sostiuisco il precedente fragment Home con il nuovo List Fragment
+        // OCCHIO AL REPLACE!!!!
+        fragmentTransaction.replace(R.id.frameLayoutHome, listFragment, "LIST_FRAGMENT");
+
+        // aggiungiamo nuovo fragment tag nello stack di navigazione per permettere
+        //all'utente di poter tornare alla Home premendo il pulsante back
+        fragmentTransaction.addToBackStack(listFragment.getTag());
+
+        // finalizzo e convalido le operazioni di transizione
+        fragmentTransaction.commit();
+
     }
 }

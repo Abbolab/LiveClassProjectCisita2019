@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/backgroundCell">
+
+    <!-- NOME UTENTE -->
+    <TextView
+        android:id="@+id/userTextViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name Surname"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- DATA REGISTRAZIONE -->
+    <TextView
+        android:id="@+id/userTextViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date Registration"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- ETA' UTENTE -->
+    <TextView
+        android:id="@+id/userTextViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age: 0anni"
+        android:textStyle="italic"/>
+
+
+
+</LinearLayout>

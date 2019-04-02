@@ -57,6 +57,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btnHomeShowList:
                 Log.d(MainActivity.K_TAG, "Pulsante 'Show Users' premuto!");
+
+                // ottengo Activity attached e ne faccio il casting per invocare il metodo
+                MainActivity mainActivity = (MainActivity)getActivity();
+                // invoco metodo pubblico per il cambio di fragment
+                mainActivity.goToListFragment();
+
                 break;
             case R.id.btnSecondTest:
                 Log.d(MainActivity.K_TAG, "Pulsante 'Second Test' premuto!");
