@@ -55,6 +55,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         //scrivo nella texview del ViewHolder l'età dell'utente sotto forma di stringa
         holder.textViewAge.setText("Age: " + String.valueOf(user.age));
 
+
+
     }
 
     @Override
